@@ -1,0 +1,105 @@
+:root {
+  --ctrl-seg-bg: #fff;
+  --ctrl-seg-active-bg: #847AD1;
+  --ctrl-seg-color: var(--ctrl-seg-active-bg);
+  --ctrl-seg-active-color: var(--ctrl-seg-bg);
+  --ctrl-seg-pad: 10px;
+  --ctrl-seg-font-size: 14px;
+  --ctrl-seg-border-radius: 4px;
+}
+
+
+.control-segmented {
+  border: 1px solid var(--ctrl-seg-active-bg);
+  border-radius: var(--ctrl-seg-border-radius);
+  display: flex;
+  font-size: var(--ctrl-seg-font-size);
+  overflow: hidden;
+}
+
+
+.control-segmented label {
+  background-color: var(--ctrl-seg-bg);
+  border-left: 0;
+  color: var(--ctrl-seg-color);
+  flex-grow: 1;
+  overflow: hidden;
+  padding: var(--ctrl-seg-pad);
+  position: relative;
+  text-align: center;
+  text-overflow: ellipsis;
+  text-transform: capitalize;
+}
+
+/* block items */
+.control-segmented.block {
+  flex-direction: column;
+}
+
+/* row & bordered */
+.control-segmented.bordered {
+  border: 0;
+  border-left: 1px solid var(--ctrl-seg-active-bg);
+  border-radius: var(--ctrl-seg-border-radius);
+}
+.control-segmented.bordered label {
+  border: 1px solid var(--ctrl-seg-active-bg);
+  border-left: 0;
+}
+.control-segmented.bordered label:first-child {
+  border-top-left-radius: var(--ctrl-seg-border-radius);
+  border-bottom-left-radius: var(--ctrl-seg-border-radius);
+  border-left: 0;
+}
+.control-segmented.bordered label:last-child {
+  border-top-right-radius: var(--ctrl-seg-border-radius);
+  border-bottom-right-radius: var(--ctrl-seg-border-radius);
+}
+
+/* column & bordered */
+.control-segmented.block.bordered {
+  border-top: 1px solid var(--ctrl-seg-active-bg);
+}
+.control-segmented.block.bordered label {
+  border-top: 0;
+}
+.control-segmented.block.bordered label:first-child {
+  border-top-left-radius: var(--ctrl-seg-border-radius);
+  border-top-right-radius: var(--ctrl-seg-border-radius);
+  border-bottom-left-radius: 0;
+}
+.control-segmented.block.bordered label:last-child {
+  border-top-right-radius: 0;
+  border-bottom-left-radius: var(--ctrl-seg-border-radius);
+  border-bottom-right-radius: var(--ctrl-seg-border-radius);
+}
+
+/* active */
+.control-segmented label.active {
+  background-color: var(--ctrl-seg-active-bg);
+  color: var(--ctrl-seg-active-color);
+}
+.control-segmented label:hover,
+.control-segmented label:focus {
+  background-color: color(var(--ctrl-seg-active-bg) tint(90%));;
+  cursor: pointer;
+}
+.control-segmented label.active:hover,
+.control-segmented label.active:focus {
+  background-color: color(var(--ctrl-seg-active-bg) shade(20%));;
+  cursor: pointer;
+}
+.control-segmented input[type="checkbox"],
+.control-segmented input[type="radio"] {
+  opacity: 0;
+  position: absolute;
+  visibility: hidden;
+  z-index: 1;
+}
+.control-segmented.with-ticks label.active::before {
+  content: '\2714';
+  opacity: 1;
+  position: absolute;
+  left: 10px;
+  visibility: visible;
+}

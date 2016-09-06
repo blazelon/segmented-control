@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Segmented Control</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css css/demo.css -->
+    <link rel="stylesheet" href="css/demo.css">
+    <!-- endbuild -->
+    <!-- build:css css/segmented-control.css -->
+    <link rel="stylesheet" href="css/segmented-control.css">
+    <!-- endbuild -->
+    
+  </head>
+  <body>
+    <h3>Basic</h3>
+  <div>Which is better?</div>
+  <div class="control-segmented">
+    <label>
+      <input type="radio" name="cartoons" value="simpsons" tabindex="1" checked>Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb
+    </label>
+    <label>
+      <input type="radio" name="cartoons" value="family_guy" tabindex="1">The Assassination of Jesse James by the Coward Robert Ford
+    </label>
+    <!-- <label>
+      <input type="radio" name="cartoons" value="southpark" tabindex="1">Lemony Snicket's A Series of Unfortunate Events
+    </label> -->
+  </div>
+  <br>
+  
+  <div>Which is better?</div>
+  <div class="control-segmented bordered">
+    <label>
+      <input type="radio" name="fruits" value="bananas" tabindex="1" checked>Bananas
+    </label>
+    <label>
+      <input type="radio" name="fruits" value="mangoes" tabindex="1">Mangoes
+    </label>
+    <label>
+      <input type="radio" name="fruits" value="apples" tabindex="1">Apples
+    </label>
+  </div>
+  <br>
+  
+  <div>Select all that you like?</div>
+  <div class="control-segmented block with-ticks">
+    <label>
+      <input type="checkbox" name="fruits2" value="bananas" tabindex="1">Bananas
+    </label>
+    <label>
+      <input type="checkbox" name="fruits2" value="mangoes" tabindex="1">Mangoes
+    </label>
+    <label>
+      <input type="checkbox" name="fruits2" value="apples" tabindex="1">Apples
+    </label>
+  </div>
+    
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    
+    <!-- build:js js/segmented-control.js -->
+    <script src="js/segmented-control.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

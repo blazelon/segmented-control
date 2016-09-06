@@ -2,6 +2,7 @@
 ################
 .ftppass
 .build
+.tmp
 
 # Node #
 ########
